@@ -1,0 +1,22 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "auth and CRUD",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc && node dist/app.js",
+    "dev": "tsc -watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JVictor",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
