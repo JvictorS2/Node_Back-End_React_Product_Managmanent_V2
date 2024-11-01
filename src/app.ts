@@ -1,18 +1,16 @@
-
 import {allRouters} from './routers/index'
+import express from "express";
+import cors from 'cors';
 
-const express = require("express")
-const app = express()
-const PORT = 3000;
+// Configuração do servidor
 
+const app : express.Application = express()
+const PORT : number = 3000;
 
+app.use(cors())
 allRouters(app)
 
-app.listen(PORT, (error : Error | null) => {
-    if(error){
-        console.log("Erro ao iniciar servidor")
-        return;
-    }
+app.listen(PORT, () => {
 
     console.log("Servidor iniciado")
 })

@@ -11,12 +11,17 @@
   "author": "JVictor",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/mysql": "^2.15.26",
+    "@types/nodemon": "^1.19.6",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "express": "^4.21.1"
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mysql": "^2.18.1"
   }
 }

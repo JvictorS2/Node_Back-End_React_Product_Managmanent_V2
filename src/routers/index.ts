@@ -1,7 +1,11 @@
-import {router} from './products'
+import {routerProduct} from './products'
+import { routerUser } from './user'
+import express from 'express'
 
-const allRouters = (app : any) => {
-    app.use(router)
+//Configuração rotas
+const allRouters = (app : express.Application) => {
+    app.use(routerProduct)
+    app.use(routerUser)
 
 }
 

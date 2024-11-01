@@ -1,23 +1,26 @@
 
 import { Router } from "express";
-const router = Router();
+import express from 'express'
+const routerProduct = Router();
 
-router.get("/", (req , res ) => {
+// Rotas da tabela products
+
+routerProduct.get("/", (req: express.Request , res : express.Response ) => {
     res.send("GET solicitação")
 })
 
-router.post("/api/create", (req , res ) => {
+routerProduct.post("/api/create", (req: express.Request , res : express.Response) => {
     res.send("Post solicitação")
 })
 
-router.put("/api/update/:id", (req  , res ) => {
+routerProduct.put("/api/update/:id", (req: express.Request , res : express.Response ) => {
     const {id} = req.params;
     res.send(`PUT solicitação, ${id}`)
 })
 
-router.delete("/api/delete/:id", (req , res ) => {
+routerProduct.delete("/api/delete/:id", (req: express.Request , res : express.Response ) => {
     const {id} = req.params;
     res.send(`DELETE solicitação, ${id}`)
 })
 
-export {router}
+export {routerProduct}
