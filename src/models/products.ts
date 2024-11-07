@@ -1,9 +1,8 @@
-interface products {
-    id: number;
-    name: string;
-    value: number;
-    description: string;
-    qtde: number;
+interface Product {
+  name: string;
+  value: number;
+  description: string;
+  qtde: number;
 }
 
-export {products}
+export { Product };

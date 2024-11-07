@@ -1,26 +1,24 @@
-
 import { Router } from "express";
-import express from 'express'
+import express from "express";
+import {
+  deleteProduct,
+  getAllProducts,
+  getProduct,
+  postProduct,
+  putProduct,
+} from "../controllers/products";
 const routerProduct = Router();
 
 // Rotas da tabela products
 
-routerProduct.get("/", (req: express.Request , res : express.Response ) => {
-    res.send("GET solicitação")
-})
+routerProduct.get("/api/product", getAllProducts);
 
-routerProduct.post("/api/create", (req: express.Request , res : express.Response) => {
-    res.send("Post solicitação")
-})
+routerProduct.get("/api/product/:id", getProduct);
 
-routerProduct.put("/api/update/:id", (req: express.Request , res : express.Response ) => {
-    const {id} = req.params;
-    res.send(`PUT solicitação, ${id}`)
-})
+routerProduct.post("/api/product/create", postProduct);
 
-routerProduct.delete("/api/delete/:id", (req: express.Request , res : express.Response ) => {
-    const {id} = req.params;
-    res.send(`DELETE solicitação, ${id}`)
-})
+routerProduct.put("/api/product/update/:id", putProduct);
 
-export {routerProduct}
+routerProduct.delete("/api/product/delete/:id", deleteProduct);
+
+export { routerProduct };
